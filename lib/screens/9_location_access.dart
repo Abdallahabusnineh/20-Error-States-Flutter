@@ -21,20 +21,26 @@ class LocationAccessScreen extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 13),
                     blurRadius: 25,
-                    color: Color(0xFFD27E4A).withOpacity(0.17),
+                    color: Color(0xFFD27E4A).withValues(alpha: 0.17),
                   ),
                 ],
               ),
-              child: FlatButton(
-                color: Color(0xFFFF9858),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
-                child: Text(
-                  "Enable".toUpperCase(),
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: const Color(0xFFFF9858), // same background color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.white, // for text & ripple effect
+  ),
+  child: const Text(
+    "ENABLE",
+    style: TextStyle(color: Colors.white),
+  ),
+)
+
             ),
           )
         ],

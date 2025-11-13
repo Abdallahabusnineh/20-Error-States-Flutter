@@ -16,26 +16,32 @@ class CameraAccessScreen extends StatelessWidget {
             left: MediaQuery.of(context).size.width * 0.3,
             right: MediaQuery.of(context).size.width * 0.3,
             child: Container(
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 13),
-                    blurRadius: 25,
-                    color: Color(0xFF5666C2).withOpacity(0.17),
-                  ),
-                ],
-              ),
-              child: FlatButton(
-                color: Color(0xFFED72AD),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
-                child: Text(
-                  "Allow".toUpperCase(),
-                  style: TextStyle(color: Colors.white),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(0, 13),
+                      blurRadius: 25,
+                      color: Color(0xFF5666C2).withValues(alpha: 0.17),
+                    ),
+                  ],
                 ),
-              ),
-            ),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor:
+                        const Color(0xFFED72AD), // same background color
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    foregroundColor: Colors.white, // text & ripple color
+                  ),
+                  child: const Text(
+                    "ALLOW",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )),
           )
         ],
       ),

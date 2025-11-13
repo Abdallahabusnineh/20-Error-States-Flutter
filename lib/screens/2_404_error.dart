@@ -15,16 +15,22 @@ class Error404Screen extends StatelessWidget {
             bottom: MediaQuery.of(context).size.height * 0.15,
             left: MediaQuery.of(context).size.width * 0.3,
             right: MediaQuery.of(context).size.width * 0.3,
-            child: FlatButton(
-              color: Color(0xFF6B92F2),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
-              child: Text(
-                "Go Home".toUpperCase(),
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: const Color(0xFF6B92F2), // same color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.white, // text & ripple color
+  ),
+  child: Text(
+    "GO HOME",
+    style: const TextStyle(color: Colors.white),
+  ),
+)
+
           )
         ],
       ),

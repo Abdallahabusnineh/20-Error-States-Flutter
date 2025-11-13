@@ -14,13 +14,19 @@ class NoConnectionScreen extends StatelessWidget {
           Positioned(
             bottom: 100,
             left: 30,
-            child: FlatButton(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
-              child: Text("Retry".toUpperCase()),
-            ),
+            child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: Colors.white, // same as FlatButton color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    foregroundColor: Colors.black, // text & ripple color
+    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+  ),
+  child: Text("Retry".toUpperCase()),
+)
+
           )
         ],
       ),

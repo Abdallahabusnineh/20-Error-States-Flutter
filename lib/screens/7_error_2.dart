@@ -21,19 +21,26 @@ class Error2Screen extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 13),
                     blurRadius: 25,
-                    color: Color(0xFF5666C2).withOpacity(0.17),
+                    color: Color(0xFF5666C2).withValues(alpha: 0.17),
                   ),
                 ],
               ),
-              child: FlatButton(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
-                child: Text(
-                  "retry".toUpperCase(),
-                ),
-              ),
+              child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: Colors.white, // same background color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.black, // text & ripple color
+  ),
+  child: const Text(
+    "RETRY",
+    style: TextStyle(color: Colors.black),
+  ),
+)
+
             ),
           )
         ],

@@ -21,19 +21,26 @@ class BrokenLinkScreen extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 5),
                     blurRadius: 25,
-                    color: Colors.black.withOpacity(0.17),
+                    color: Colors.black.withValues(alpha: 0.17),
                   ),
                 ],
               ),
-              child: FlatButton(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
-                child: Text(
-                  "retry".toUpperCase(),
-                ),
-              ),
+              child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: Colors.white, // same as FlatButton color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.black, // text & ripple color
+  ),
+  child: const Text(
+    "RETRY",
+    style: TextStyle(color: Colors.black),
+  ),
+)
+
             ),
           )
         ],

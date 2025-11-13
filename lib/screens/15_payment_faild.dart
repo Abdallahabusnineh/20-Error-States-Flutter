@@ -21,20 +21,26 @@ class PaymentFaildScreen extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 13),
                     blurRadius: 25,
-                    color: Color(0xFF5666C2).withOpacity(0.17),
+                    color: Color(0xFF5666C2).withValues(alpha: 0.17),
                   ),
                 ],
               ),
-              child: FlatButton(
-                color: Color(0xFFFF6F6F),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
-                child: Text(
-                  "retry".toUpperCase(),
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: const Color(0xFFFF6F6F), // same background color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.white, // text & ripple color
+  ),
+  child: const Text(
+    "RETRY",
+    style: TextStyle(color: Colors.white),
+  ),
+)
+
             ),
           )
         ],

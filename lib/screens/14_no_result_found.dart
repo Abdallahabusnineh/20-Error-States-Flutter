@@ -21,7 +21,7 @@ class NoResultFoundScreen extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 13),
                     blurRadius: 25,
-                    color: Color(0xFF5666C2).withOpacity(0.17),
+                    color: Color(0xFF5666C2).withValues(alpha: 0.17),
                   ),
                 ],
               ),

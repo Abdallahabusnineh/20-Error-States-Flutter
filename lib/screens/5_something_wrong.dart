@@ -15,16 +15,22 @@ class SomethingWrongScreen extends StatelessWidget {
             bottom: MediaQuery.of(context).size.height * 0.15,
             left: MediaQuery.of(context).size.width * 0.3,
             right: MediaQuery.of(context).size.width * 0.3,
-            child: FlatButton(
-              color: Color(0xFF7070DA),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
-              child: Text(
-                "go back".toUpperCase(),
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            child: TextButton(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    backgroundColor: const Color(0xFF7070DA), // same color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(50),
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    foregroundColor: Colors.white, // text & ripple color
+  ),
+  child: const Text(
+    "GO BACK",
+    style: TextStyle(color: Colors.white),
+  ),
+)
+
           )
         ],
       ),
